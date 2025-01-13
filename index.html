@@ -1,129 +1,88 @@
-      <!DOCTYPE html>
-      <html lang="es">
-         <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>UIDE-SAIC</title>
-            <style>
-               body {
-               font-family: 'Roboto', Arial, sans-serif;
-               background-color: #F4F6F8;
-               color: #333333;
-               margin: 0;
-               padding: 0;
-               line-height: 1.6;
-               }
-               header {
-               background: linear-gradient(90deg, #8b0000, #5e2129);
-               color: #FFFFFF;
-               padding: 10px 15px; /* Espaciado reducido */
-               text-align: center;
-               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-               border-bottom: 4px solid #f6a700;
-               }
-               h1 {
-               font-size: 3em; /* Incrementa el tamaño de la universidad */
-               margin: 5px 0;
-               }
-               h2 {
-               font-size: 1.3em;
-               margin: 3px 0;
-               }
-               main {
-               padding: 20px;
-               max-width: 1200px;
-               margin: auto;
-               }
-               details {
-               background-color: #FFFFFF;
-               border: 1px solid #E0E0E0;
-               border-radius: 8px;
-               margin-bottom: 15px;
-               padding: 15px;
-               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-               transition: transform 0.2s, box-shadow 0.2s;
-               }
-               details:hover {
-               transform: scale(1.02);
-               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-               }
-               summary {
-               cursor: pointer;
-               font-weight: bold;
-               font-size: 1.2em;
-               color: #8b0000;
-               transition: color 0.2s;
-               }
-               summary:hover {
-               color: #5e2129;
-               }
-               ul {
-               list-style: none;
-               padding-left: 20px;
-               }
-               li {
-               margin: 8px 0;
-               }
-               .important-link {
-               display: inline-block;
-               background: #f6a700;
-               color: #FFFFFF;
-               font-weight: bold;
-               font-size: 16px;
-               text-decoration: none;
-               padding: 12px 25px;
-               border-radius: 8px;
-               transition: transform 0.2s ease, box-shadow 0.2s ease;
-               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-               }
-               .important-link:hover {
-               background: #d58100;
-               transform: scale(1.1);
-               box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-               }
-               .instructions {
-               color: #333333;
-               padding: 15px;
-               margin: 15px 0;
-               border-radius: 8px;
-               font-size: 1em;
-               background: none;
-               box-shadow: none;
-               }
-               .instructions h3 {
-               margin: 0 0 10px 0;
-               font-size: 1.2em;
-               color: #8b0000;
-               }
-               footer {
-               background-color: #012e46;
-               color: #FFFFFF;
-               padding: 20px;
-               text-align: center;
-               font-size: 0.9em;
-               box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-               border-top: 4px solid #f6a700;
-               }
-               footer p {
-               margin: 0;
-               }
-            </style>
-         </head>
-         <body>
-            <header>
-               <h1>Universidad Internacional del Ecuador</h1>
-               <h2>Sistema de Aseguramiento Interno de Calidad</h2>
-            </header>
-            <main>
-               <main style="text-align: center;">
-                  <h2 style="font-weight: bold; font-size: 1.5em;">Procesos y subprocesos</h2>
-                  <p>
-                     Esta API está diseñada para facilitar la integración y gestión de procesos mediante la automatización de tareas clave, garantizando eficiencia y precisión. 
-                     Proporciona un conjunto de endpoints seguros y optimizados que permiten la interacción con el sistema, cumpliendo con los estándares actuales de interoperabilidad y confidencialidad de datos.
-                  </p>
-                  <p><strong>Silvia Jaramillo</strong></p>
-                  <p><strong>Darío Hurtado</strong></p>
-            </main>
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>UIDE-SAIC</title>
+      <style>
+         body {
+         font-family: 'Roboto', Arial, sans-serif;
+         background-color: #F4F6F8;
+         color: #333333;
+         margin: 0;
+         padding: 0;
+         line-height: 1.6;
+         }
+         header {
+         background: linear-gradient(90deg, #8b0000, #5e2129);
+         color: #FFFFFF;
+         padding: 10px 15px;
+         text-align: center;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         border-bottom: 4px solid #f6a700;
+         }
+         h1 {
+         font-size: 3em;
+         margin: 5px 0;
+         }
+         h2 {
+         font-size: 1.3em;
+         margin: 3px 0;
+         }
+         main {
+         padding: 20px;
+         max-width: 800px;
+         margin: auto;
+         text-align: center;
+         }
+         .description {
+         margin-bottom: 20px;
+         font-size: 1.1em;
+         }
+         .names-container {
+         margin-top: 30px;
+         padding: 15px;
+         background: #FFFFFF;
+         border-radius: 8px;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         display: inline-block;
+         }
+         .names-container p {
+         margin: 5px 0;
+         font-size: 1.2em;
+         font-weight: bold;
+         color: #8b0000;
+         }
+         footer {
+         background-color: #012e46;
+         color: #FFFFFF;
+         padding: 20px;
+         text-align: center;
+         font-size: 0.9em;
+         box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+         border-top: 4px solid #f6a700;
+         }
+         footer p {
+         margin: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1>Universidad Internacional del Ecuador</h1>
+         <h2>Sistema de Aseguramiento Interno de Calidad</h2>
+      </header>
+      <main>
+         <h2 style="font-weight: bold; font-size: 1.8em;">Procesos y subprocesos</h2>
+         <p class="description">
+            Esta API está diseñada para facilitar la integración y gestión de procesos mediante la automatización de tareas clave, garantizando eficiencia y precisión. 
+            Proporciona un conjunto de endpoints seguros y optimizados que permiten la interacción con el sistema, cumpliendo con los estándares actuales de interoperabilidad y confidencialidad de datos.
+         </p>
+         <div class="names-container">
+            <p>Silvia Jaramillo</p>
+            <p>Darío Hurtado</p>
+         </div>
+</main>
             <details>
                <summary>Admisión académica</summary>
                <hr>
