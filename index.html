@@ -154,6 +154,32 @@
          color: #8B0000;
          margin-bottom: 10px;
          }        
+      /* Círculos translúcidos */
+      body::before, body::after {
+         content: "";
+         position: absolute;
+         border-radius: 50%;
+         opacity: 0.15;
+         z-index: -1;
+      }
+
+      body::before {
+         background: #8b0000;
+         width: 400px;
+         height: 400px;
+         top: -50px;
+         left: -100px;
+      }
+
+      body::after {
+         background: #f6a700;
+         width: 500px;
+         height: 500px;
+         bottom: -150px;
+         right: -150px;
+      }
+
+         
          footer {
             background-color: #012E46;
             color: #FFFFFF;
