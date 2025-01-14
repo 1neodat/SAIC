@@ -5,132 +5,116 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>UIDE-SAIC</title>
       <style>
+         /* General styles */
          body {
-         font-family: 'Roboto', Arial, sans-serif;
-         background-color: #F4F6F8;
-         color: #333333;
-         margin: 0;
-         padding: 0;
-         line-height: 1.6;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #F4F6F8;
+            color: #333333;
+            margin: 0;
+            padding: 0;
          }
          header {
-         background: linear-gradient(90deg, #8b0000, #5e2129);
-         color: #FFFFFF;
-         padding: 10px 15px; /* Espaciado reducido */
-         text-align: center;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         border-bottom: 4px solid #f6a700;
+            background: linear-gradient(90deg, #8B0000, #5E2129);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px 15px;
          }
-         h1 {
-         font-size: 3em; /* Incrementa el tamaño de la universidad */
-         margin: 5px 0;
+         header h1 {
+            font-size: 2em;
+            margin: 0;
          }
-         h2 {
-         font-size: 1.3em;
-         margin: 3px 0;
+         header h2 {
+            font-size: 1.2em;
+            margin: 5px 0 0 0;
          }
          main {
-         padding: 20px;
-         max-width: 1200px;
-         margin: auto;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
          }
-         details {
-         background-color: #FFFFFF;
-         border: 1px solid #E0E0E0;
-         border-radius: 8px;
-         margin-bottom: 15px;
-         padding: 15px;
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-         transition: transform 0.2s, box-shadow 0.2s;
+         .card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
          }
-         details:hover {
-         transform: scale(1.02);
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         .card h2 {
+            font-size: 1.8em;
+            color: #8B0000;
+            margin-bottom: 15px;
          }
-         summary {
-         cursor: pointer;
-         font-weight: bold;
-         font-size: 1.2em;
-         color: #8b0000;
-         transition: color 0.2s;
+         .card p {
+            font-size: 1em;
+            color: #555555;
          }
-         summary:hover {
-         color: #5e2129;
+         .card .authors {
+            background: #F6F6F6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
          }
-         ul {
-         list-style: none;
-         padding-left: 20px;
+         .card .authors h3 {
+            font-size: 1.2em;
+            color: #8B0000;
+            margin-bottom: 10px;
          }
-         li {
-         margin: 8px 0;
+         .card .authors p {
+            margin: 5px 0;
+            font-size: 1em;
          }
-         .important-link {
-         display: inline-block;
-         background: #f6a700;
-         color: #FFFFFF;
-         font-weight: bold;
-         font-size: 16px;
-         text-decoration: none;
-         padding: 12px 25px;
-         border-radius: 8px;
-         transition: transform 0.2s ease, box-shadow 0.2s ease;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+         .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
          }
-         .important-link:hover {
-         background: #d58100;
-         transform: scale(1.1);
-         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+         .grid-item {
+            background: #FFFFFF;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
          }
-         .instructions {
-         color: #333333;
-         padding: 15px;
-         margin: 15px 0;
-         border-radius: 8px;
-         font-size: 1em;
-         background: none;
-         box-shadow: none;
+         .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
          }
-         .instructions h3 {
-         margin: 0 0 10px 0;
-         font-size: 1.2em;
-         color: #8b0000;
+         .grid-item h3 {
+            font-size: 1.2em;
+            color: #8B0000;
+            margin-bottom: 10px;
          }
          footer {
-         background-color: #012e46;
-         color: #FFFFFF;
-         padding: 20px;
-         text-align: center;
-         font-size: 0.9em;
-         box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-         border-top: 4px solid #f6a700;
-         }
-         footer p {
-         margin: 0;
+            background-color: #012E46;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 0.9em;
          }
       </style>
    </head>
    <body>
       <header>
          <h1>Universidad Internacional del Ecuador</h1>
+         <h2>Sistema de Aseguramiento Interno de Calidad</h2>
       </header>
-      <div style="max-width: 800px; background: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); text-align: center; line-height: 1.6;">
-         <!-- Header Section -->
-         <h2 style="font-size: 1.8em; color: #8B0000; font-weight: bold; margin-bottom: 20px; border-bottom: 2px solid #8B0000; padding-bottom: 8px;">Sistema de Aseguramiento Interno de Calidad</h2>
-         <!-- Description Section -->
-         <p style="font-size: 1em; color: #555555; margin-bottom: 25px; line-height: 1.6;">
-            La API está diseñada con la finalidad de servir de guía en la carga de los documentos requeridos en el SAIC, garantizando una adecuada organización y facilitar su disponibilidad para cumplir con los requisitos de la acreditación institucional, debido a que el sistema está diseñado para asegurar el control de los documentos.
-         </p>
-         <!-- Elaborators Section -->
-         <div style="background: #F6F6F6; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: inline-block; text-align: center; margin-top: 15px;">
-            <h3 style="font-size: 1.3em; color: #8B0000; font-weight: bold; margin-bottom: 10px;">Elaborado por</h3>
-            <p style="font-size: 1em; font-weight: 600; color: #333333; margin: 5px 0;">Silvia Jaramillo</p>
-            <p style="font-size: 1em; font-weight: 600; color: #333333; margin: 5px 0;">Darío Hurtado</p>
-         </div>
-      </div>
       <main>
-         <main style="text-align: center;">
-            <h2 style="font-weight: bold; font-size: 1.5em;">Procesos y subprocesos</h2>
-         </main>
+         <div class="card">
+            <h2>Sistema de Aseguramiento Interno de Calidad</h2>
+            <p>
+               La API está diseñada con la finalidad de servir de guía en la carga de los documentos requeridos en el SAIC, 
+               garantizando una adecuada organización y facilitando su disponibilidad para cumplir con los requisitos de la 
+               acreditación institucional.
+            </p>
+            <div class="authors">
+               <h3>Elaborado por</h3>
+               <p>Silvia Jaramillo</p>
+               <p>Darío Hurtado</p>
+            </div>
+         </div>
          <details>
             <summary>Admisión académica</summary>
             <ul>
