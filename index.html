@@ -199,15 +199,42 @@
       <header>
 
 
-<div style="display: flex; align-items: center; justify-content: space-between; background-color: #8B0000; padding: 20px; color: white; border-radius: 8px;">
-    <div style="flex: 1; text-align: left;">
-        <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador" style="width: 100px; height: auto;">
+<div style="display: flex; align-items: center; justify-content: space-between; background-color: #8B0000; padding: 10px 20px; color: white; border-radius: 8px; flex-wrap: wrap;">
+    <!-- Logo -->
+    <div style="flex: 1 1 100px; text-align: left; max-width: 100px;">
+        <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador" style="width: 100%; height: auto;">
     </div>
-    <div style="flex: 2; text-align: center;">
-        <h1 style="font-size: 1.5em; margin: 0; font-weight: bold;">Sistema de Aseguramiento Interno de Calidad</h1>
+
+    <!-- Texto -->
+    <div style="flex: 1 1 calc(100% - 120px); text-align: center; margin: 10px 0;">
+        <h1 style="font-size: 1.5em; margin: 0; font-weight: bold; line-height: 1.2;">Sistema de Aseguramiento Interno de Calidad</h1>
     </div>
-    <div style="flex: 1;"></div>
 </div>
+
+<style>
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        div[style*="display: flex;"] {
+            flex-direction: column; /* Apila el contenido verticalmente */
+            align-items: center;
+            padding: 15px;
+        }
+        div[style*="max-width: 100px;"] {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.2em; /* Reduce el tamaño del texto en pantallas pequeñas */
+        }
+    }
+
+    /* Alineación general */
+    div[style*="background-color: #8B0000;"] {
+        max-width: 1200px; /* Alinea con el resto de las tablas */
+        margin: auto; /* Centra horizontalmente */
+    }
+</style>
+
         
 
       </header>
