@@ -6,745 +6,153 @@
       <title>UIDE-SAIC</title>
       <style>
          body {
-         font-family: 'Roboto', Arial, sans-serif;
-         background-color: #F4F6F8;
-         color: #333333;
-         margin: 0;
-         padding: 0;
-         line-height: 1.2;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #F4F6F8;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
          }
          header {
-         background:#8b0000;
-         color: #FFFFFF;
-         padding: 5px 10px; /* Espaciado reducido */
-         text-align: center;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         border-bottom: 4px solid #f6a700;
+            background: #8b0000;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #f6a700;
          }
-
-         header div {
-    max-width: none; /* Quitar límites fijos */
-    flex: 1; /* Hacer que todos los elementos compartan el espacio disponible */
-}
-
-         
-         h1 {
-         font-size: 3.5em; /* Incrementa el tamaño de la universidad */
-         margin: 5px 0;
+         header .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
          }
-         h2 {
-         font-size: 1.3em;
-         margin: 3px 0;
+         header .logo {
+            flex: 0 0 100px;
+         }
+         header .logo img {
+            width: 100%;
+            height: auto;
+         }
+         header h1 {
+            flex: 1;
+            font-size: 1.7em;
+            margin: 5px 0 0 0;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #FFFFFF;
+            text-align: center;
          }
          main {
-         padding: 30px;
-         max-width: 1000px;
-         margin: auto;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
          }
-
-
-         
          details {
-         background-color: #FFFFFF;
-         border: 1px solid #E0E0E0;
-         border-radius: 8px;
-         margin-bottom: 15px;
-         padding: 15px;
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-         transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
          }
          details:hover {
-         transform: scale(1.02);
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
          }
          summary {
-         cursor: pointer;
-         font-weight: bold;
-         font-size: 1.2em;
-         color: #8b0000;
-         transition: color 0.2s;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #8b0000;
+            transition: color 0.2s;
          }
          summary:hover {
-         color: #5e2129;
+            color: #5e2129;
          }
          ul {
-         list-style: none;
-         padding-left: 20px;
+            list-style: none;
+            padding-left: 20px;
          }
          li {
-         margin: 8px 0;
+            margin: 8px 0;
          }
          .card {
-         max-width: 1000px; /* Ajusta al mismo ancho que el de "Procesos y subprocesos" */
-         margin: auto; /* Centra el contenedor horizontalmente */
-         border-radius: 12px; /* Mantiene el diseño consistente */
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         }       
-         .card {
-         background: #FFFFFF;
-         padding: 20px;
-         text-align: justify;
-         margin-bottom: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #FFFFFF;
+            padding: 20px;
+            text-align: justify;
+            margin-bottom: 10px;
          }
          .card h2 {
-         font-size: 0.9em;
-         color: #8B0000;
-         margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #8B0000;
+            margin-bottom: 15px;
+            text-align: center;
          }
-         .card .authors {
-         background: #F6F6F6;
-         border-radius: 3px;
-         padding: 6px;
-         margin-top: 10px;
-         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+         .authors {
+            background: #F6F6F6;
+            border-radius: 3px;
+            padding: 6px;
+            margin-top: 10px;
+            text-align: right;
          }
-         .card .authors h3 {
-         font-size: 0.8em;
-         color: #8B0000;
-         margin-bottom: 3px;
+         .authors p {
+            margin: 2px 0;
+            font-size: 0.9em;
+            color: #8B0000;
          }
-         .card .authors p {
-         margin: 2px 0;
-         font-size: 0.8em;
-         }
-
-
          footer {
-         background-color: #012e46; /* Color de fondo */
-         color: #FFFFFF; /* Color del texto */
-         padding: 25px 0; /* Espaciado interno */
-         text-align: center; /* Centrar el texto */
-         font-size: 0.8em; /* Tamaño del texto */
-         border-top: 4px solid #f6a700; /* Línea superior */
+            background-color: #012e46;
+            color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.8em;
+            border-top: 4px solid #f6a700;
          }
-
-         
+         @media (max-width: 768px) {
+            header .header-container {
+               flex-direction: column;
+               align-items: center;
+            }
+            header h1 {
+               font-size: 1.5em;
+            }
+            main {
+               padding: 20px;
+            }
+         }
       </style>
    </head>
    <body>
       <header>
-         <div style="display: flex; align-items: center; justify-content: space-between; background-color: #8b0000; color: white; border-radius: 8px;">
-            <!-- Logo -->
-            <div style="flex: 1 1 90px; text-align: left; max-width: 100px;">
-               <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador" style="width: 100%; height: auto;">
+         <div class="header-container">
+            <div class="logo">
+               <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador">
             </div>
-            <!-- Texto -->
-            <div style="flex: 1 1 calc(100% - 100px); text-align: center; margin: 0;">
-               <h1 style="font-size: 1.7em; margin: 5px 0 0 0; font-weight: bold; line-height: 1.2; color: #FFFFFF;">Sistema de Aseguramiento Interno de Calidad</h1>
-            </div>
+            <h1>Sistema de Aseguramiento Interno de Calidad</h1>
          </div>
-         <style>
-            /* Responsive Design */
-            @media (max-width: 768px) {
-            div[style*="display: flex;"] {
-            flex-direction: column; /* Apila el contenido verticalmente */
-            align-items: center;
-            padding: 1px 2px; /* Reduce espacio horizontal */
-            width: 100%; /* Asegura que ocupe el ancho completo del viewport */
-            overflow-x: hidden; /* Elimina desplazamientos */
-            }
-            }
-            div[style*="max-width: 100px;"] {
-            text-align: center;
-            margin-bottom: 2px;
-            }
-            h1 {
-            font-size: 1.5em; /* Reduce el tamaño del texto en pantallas pequeñas */
-            margin: 2px 0; /* Reduce espacio entre logo y texto */
-            }
-            }
-            /* Alineación general */
-            div[style*="background-color: #8B0000;"] {
-            max-width: 1000px; /* Ajusta el ancho máximo */
-            margin: auto; /* Centra horizontalmente */
-            }
-         </style>
       </header>
       <main>
-      <div class="card">
-         <h2 style="text-align: center; font-size: 1.4em; color: #8B0000; font-weight: bold;">Gestión de documentos</h2>
-         <p>
-            El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
-            <h2 class="authors" style="text-align: right; padding: 10px; style="font-size: 0.9em; color: #8B0000; margin-bottom: 1px;">Desarrollado por: 
-         <p>Silvia Jaramillo</p>
-         <P>Darío Hurtado</P>
-         </h2>
-         </p>
-      </div>
-      <main>
+         <div class="card">
+            <h2>Gestión de documentos</h2>
+            <p>
+               El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
+            </p>
+            <div class="authors">
+               <p>Desarrollado por:</p>
+               <p>Silvia Jaramillo</p>
+               <p>Darío Hurtado</p>
+            </div>
+         </div>
          <details>
             <summary>Procesos y subprocesos</summary>
-            <hr>
-            <details>
-               <summary>Admisión académica</summary>
-               <ul>
-               <details>
-                  <summary>Admisión académica</summary>
-                  <hr>
-                  Dentro de esta carpeta se encuentran la información de <b>Becas</b> y <b>Entrevistas</b>.
-                  <h3>Indicaciones:</h3>
-                  <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                  <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                  <li><b>00. Becas</b></li>
-                  <ul>
-                     <p>1. Carpetas por año.</p>
-                     <ul>
-                        <li>00. Enero-Diciembre.2023</li>
-                        <li>01. Enero-Diciembre.2024</li>
-                     </ul>
-                     <p>2. Dentro de las carpetas por año se debe crear una carpeta por cada estudiante solicitante, que contenga:</p>
-                     <ul>
-                        <li>2.1 Solicitud de Beca.</li>
-                        <li>2.2 Informe de resolución de beca.</li>
-                        <li>2.3 Otros documentos necesarios en el proceso.</li>
-                     </ul>
-                  </ul>
-                  <li><b>01. Entrevistas</b></li>
-                  <ul>
-                  <p>1. Carpetas por periodo académico:</p>
-                  <ul>
-                     <li>00. Abril-Agosto.2023</li>
-                     <li>01. Noviembre.2023-Marzo.2024</li>
-                     <li>02. Abril-Agosto.2024</li>
-                     <li>03. Octubre.2024-Marzo.2025</li>
-                  </ul>
-                  </div>
-               </details>
-               <details>
-                  <summary>Homologación</summary>
-                  <hr>
-                  Dentro de esta carpeta se encuentran la siguiente información.
-                  <h3>Indicaciones:</h3>
-                  <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                  <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                  <p>1. Carpetas por año:</p>
-                  <ul>
-                     <li>00. Enero-Diciembre.2023</li>
-                     <li>01. Enero-Diciembre.2024</li>
-                  </ul>
-                  <p>2. Dentro de las carpetas por año se debe crear una carpeta por cada estudiante solicitante, que contenga:</p>
-                  <ul>
-                     <li>2.1 Sílabos de la Universidad de procedencia.</li>
-                     <li>2.2 Notas de la Universidad de procedencia.</li>
-                     <li>2.3 Documento de homologación otorgado por la UIDE.</li>
-                  </ul>
-               </details>
-               <details>
-                  <summary>Reconocimiento</summary>
-                  <hr>
-                  Dentro de esta carpeta se encuentran la siguiente información.
-                  <h3>Indicaciones:</h3>
-                  <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                  <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                  <p>1. Carpetas por año:</p>
-                  <ul>
-                     <li>00. Enero-Diciembre.2023</li>
-                     <li>01. Enero-Diciembre.2024</li>
-                  </ul>
-                  <p>2. El reconocimiento es interno y se da cuando un estudiante se cambia de carrera dentro de la misma institución. Se debe crear una carpeta por estudiante que contenga:</p>
-                  <ul>
-                     <li>2.1 Informe técnico emitido por Bienestar Estudiantil.</li>
-                     <li>2.2 Acta de reconocimiento.</li>
-                     <li>2.3 La información se ingresa por año.</li>
-                  </ul>
-               </details>
-               <details>
-                  <summary>Validación de conocimiento</summary>
-                  <hr>
-                  Dentro de esta carpeta se encuentran la siguiente información.
-                  <h3>Indicaciones:</h3>
-                  <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                  <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                  <p>1. Carpetas por año:</p>
-                  <ul>
-                     <li>00. Enero-Diciembre.2023</li>
-                     <li>01. Enero-Diciembre.2024</li>
-                  </ul>
-                  <p>2. Se debe crear una carpeta por estudiante que contenga lo siguiente:</p>
-                  <ul>
-                     <li>2.1 Solicitud examen de validación de conocimientos por parte de los estudiantes.</li>
-                     <li>2.2 Informe técnico por estudiante (Solicitud del estudiante, calificación, etc. Esto es según el proceso desarrollado por la Escuela.</li>
-                  </ul>
-               </details>
-               <details>
-                  <summary>Validación por ejercicio profesional</summary>
-                  <hr>
-                  Dentro de esta carpeta se encuentran la siguiente información.
-                  <h3>Indicaciones:</h3>
-                  <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                  <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                  <p>1. Carpetas por año:</p>
-                  <ul>
-                     <li>00. Enero-Diciembre.2023</li>
-                     <li>01. Enero-Diciembre.2024</li>
-                  </ul>
-                  <p>2. Se debe crear una carpeta por estudiante que contenga lo siguiente:</p>
-                  <ul>
-                     <li>2.1 Solicitud examen de validación por ejercicio profesional justificando su experiencia profesional, habilidades, destrezas, entre otros.</li>
-                     <li>2.2 Documentos que evidencien el ejercicio profesional y demás que se consideren necesarios.</li>
-                     <li>2.3 Informe técnico (Solicitud del estudiante, calificación, etc. Esto es según proceso desarrollado por Escuela).</li>
-                  </ul>
-               </details>
-            </details>
-            <details>
-               <summary>Desarrollo enseñanza-aprendizaje</summary>
-               <ul>
-                  <details>
-                     <summary>Ayudantías de docencia e investigación</summary>
-                     <hr>
-                     Dentro de esta carpeta se encuentran la siguiente información.
-                     <h3>Indicaciones:</h3>
-                     <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                     <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                     <p>1. Carpetas por año:</p>
-                     <ul>
-                        <li>00. Enero-Diciembre 2023</li>
-                        <li>01. Enero-Diciembre 2024</li>
-                     </ul>
-                     <p>2. Se debe crear una carpeta por estudiante que contenga:</p>
-                     <ul>
-                        <li>2.1 Solicitud de ayudantía y docencia, aprobación, actividades a desarrollar, ejecución, control y otros documentos necesarios que validen los procesos.</li>
-                     </ul>
-                  </details>
-                  <details>
-                     <summary>Contenidos de enseñanza-aprendizaje</summary>
-                     <hr>
-                     Dentro de esta carpeta se encuentran la siguiente información.
-                     <h3>Indicaciones:</h3>
-                     <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                     <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                     <p>1. Carpetas por semestre:</p>
-                     <ul>
-                        <li>00. Abril-Agosto.2023</li>
-                        <li>01. Noviembre.2023-Marzo.2024</li>
-                        <li>02. Abril-Agosto.2024</li>
-                        <li>03. Octubre.2024-Marzo.2025</li>
-                     </ul>
-                     <p>2. Excel de planificación académica con el encabezado de la UIDE. Documento general, NO por docente.</p>
-                     <ul>
-                        <li>2.1 El documento debe estar legalizado.</li>
-                        <li>2.2 En el documento se debe agregar una columna junto a asignatura para incluir el link de la materia en Canvas.</li>
-                     </ul>
-                  </details>
-                  <details>
-                     <summary>Gestión de sílabo</summary>
-                     <hr>
-                     Dentro de esta carpeta se encuentran la información de <b>actas e informes</b>, <b>control académico</b>, <b>guías prácticas</b>, <b>rúbricas</b>, <b>sílabos</b> y la <b>matriz CPC</b>.
-                     <h3>Indicaciones:</h3>
-                     <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                     <li><b>-</b> Todas las carpetas deben ser creadas por semestre.</li>
-                     <ul>
-                        <li>00. Abril-Agosto.2023</li>
-                        <li>01. Noviembre.2023-Marzo.2024</li>
-                        <li>02. Abril-Agosto.2024</li>
-                        <li>03. Octubre.2024-Marzo.2025</li>
-                     </ul>
-                     <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                     <li><b>00. Actas e informes</b></li>
-                     <ul>
-                        <li>1.1 Informe técnico de las gestiones realizadas para el desarrollo del sílabo (Convocatoria, actas de reunión y otros documentos que se generen).</li>
-                        <li>1.2.No se deben crear carpetas. Solamente el informe.</li>
-                     </ul>
-                     <li><b>01. Control académico por semestre.</b></li>
-                     <ul>
-                        <li>1.1 Descargar del sistema de control de asistencia el reporte docente.</li>
-                        <li>1.1.1 Se debe descargar por asignatura.</li>
-                     </ul>
-                     <li><b>02. Guías prácticas por semestre.</b></li>
-                     <ul>
-                        <li>2.1 Se debe adjuntar la guía del desarrollo de práctica.</li>
-                     </ul>
-                     <li><b>03. Sílabos por semestre.</b></li>
-                     <ul>
-                        <li>3.1 Documento legalizados por ciclo.</li>
-                     </ul>
-                     <li><b>04. Matriz CPC por semestre.</b></li>
-                     <ul>
-                        <li>4.1 Documento desarrollado según formato.</li>
-                     </ul>
-                  </details>
-                  <details>
-                     <summary>Giras académicas</summary>
-                     <hr>
-                     Dentro de esta carpeta se encuentran la siguiente información <b>eventos académicos</b> y <b>giras académicas</b>.
-                     <h3>Indicaciones:</h3>
-                     <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                     <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                     <li><b>00. Eventos académicos</b></li>
-                     <ul>
-                        <p>1. Carpetas por año.</p>
-                        <ul>
-                           <li>00. Enero-Diciembre.2023</li>
-                           <li>01. Enero-Diciembre.2024</li>
-                        </ul>
-                        <p>2. Dentro de las carpetas debe constar:</p>
-                        <ul>
-                           <li>2.1 Informe técnico de todos los eventos realizados con los estudiantes en forma interna y externa (Ferias estudiantiles, exposiciones, entre otros).</li>
-                           <li>2.2 NO incluir eventos realizados por vinculación e investigación.</li>
-                        </ul>
-                     </ul>
-                     <li><b>01. Giras académicas</b></li>
-                     <ul>
-                        <p>1. Carpetas por año.</p>
-                        <ul>
-                           <li>00. Enero-Diciembre.2023</li>
-                           <li>01. Enero-Diciembre.2024</li>
-                        </ul>
-                        <p>2. Dentro de las carpetas debe constar:</p>
-                        <ul>
-                           <li>2.1 Informe técnico de las giras realizadas según planificación.</li>
-                        </ul>
-                     </ul>
-                  </details>
-                  <details>
-                     <summary>Tutorías</summary>
-                     <hr>
-                     Dentro de esta carpeta se encuentran la siguiente información <b>información del docente</b> e <b>informe del coordinador académico</b>.
-                     <h3>Indicaciones:</h3>
-                     <li><b>-</b> Si los documentos son elaborados internamente, estos deben ser codificados según el documento de codificación de la UIDE, caso contrario, debe ingresarse tal como viene de la institución de procedencia.
-                     <li><b>-</b> Cada carpeta debe tener lo siguiente:</li>
-                     <li><b>00. Informe del docente</b></li>
-                     <ul>
-                        <p>1. Carpetas por semestre.</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                        <p>2. Dentro de las carpetas debe constar:</p>
-                        <ul>
-                           <li>2.1 Informe técnico del docente.</li>
-                           <li>2.1 Formato de tutorías correspondiente (este lo realiza el docente)</li>
-                        </ul>
-                     </ul>
-                     <li><b>01. Informe del coordinador académico</b></li>
-                     <ul>
-                        <p>1. Carpetas por semestre.</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                        <p>2. Dentro de las carpetas debe constar:</p>
-                        <ul>
-                           <li>2.1 Informe técnico consolidado.</li>
-                        </ul>
-                     </ul>
-                  </details>
-               </ul>
-            </details>
-            <details>
-               <summary>Evaluación de enseñanza aprendizaje</summary>
-               <ul>
-               <details>
-                  <summary>00. Notas</summary>
-                  <div class="instructions">
-                     <h3>Indicaciones:</h3>
-                     <p>Dentro de esta carpeta debe constar:</p>
-                     <li>00. Notas por semestre.</li>
-                     <ul>
-                        <li>1.1 Subir los informes de notas de las evaluaciones (diagnóstica, formativa, sumativa).</li>
-                        <p>La información en esta carpeta se debe organizar por semestre.</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                  </div>
-               </details>
-               <details>
-               <summary>01. Remediales - Recalificaciones</summary>
-               <div class="instructions">
-               <h3>Indicaciones:</h3>
-               <p>Dentro de esta carpeta debe constar:</p>
-               <li>1.1 Notas: Informe del docente sobre la calificación (Este va dentro de la carpeta notas).</li>
-               <li>1.2 Informe técnico consolidado de las notas de los docentes. Lo realiza cada coordinador académico (este va fuera de la carpeta notas).</li>
-               <p>La información en esta carpeta se debe organizar por semestre.</p>
-               <ul>
-               <li>00. Abril-Agosto.2023</li>
-               <li>01. Noviembre.2023-Marzo.2024</li>
-               <li>02. Abril-Agosto.2024</li>
-               <li>03. Octubre.2024-Marzo.2025</li>   
-               </ul>                  
-               </div>  
-               </details>
-               </ul>
-            </details>
-            <details>
-               <summary>Planificación, control y seguimiento académico</summary>
-               <ul>
-                  <details>
-                     <summary>Comités Curriculares</summary>
-                     <div class="instructions">
-                        <h3>Indicaciones:</h3>
-                        <p>Dentro de esta carpeta debe constar:</p>
-                        <li>00. Comités curriculares</li>
-                        <ul>
-                           <li>1.1 Se sube las actas generadas por las reuniones realizadas.</li>
-                        </ul>
-                        <p>La información en esta carpeta se debe organizar por año.</p>
-                        <ul>
-                           <li>00. Enero-Diciembre 2023</li>
-                           <li>01. Enero-Diciembre 2024</li>
-                        </ul>
-                     </div>
-                  </details>
-                  <details>
-                     <summary>Juntas de escuela y facultad</summary>
-                     <div class="instructions">
-                        <h3>Indicaciones:</h3>
-                        <p>Dentro de esta carpeta debe constar:</p>
-                        <li>00. Informe de actividad docente.</li>
-                        <ul>
-                           <p>Se ingresa el informe presentado por los docentes.</p>
-                        </ul>
-                        <li>01. Informe de segundas y terceras matriculas.</li>
-                        <ul>
-                           <p> Se debe crear por cada estudiante una carpeta que contenga:.</p>
-                           <ol type="a">
-                              <li>El informe es generado por cada docente en donde existiese el caso de estudiantes con segunda y tercera matricula.</li>
-                              <li>El documento creado por los docentes es según el formato proporcionado por Bienestar Universitario (Diagnóstica, Formativa y Sumativa).</li>
-                              <li>La información de esta carpeta debe ser ingresada por semestre.</li>
-                           </ol>
-                        </ul>
-                        <li>02. Informe de TI.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe generado por el responsable del Área de Tecnologías de la Información.</li>
-                              <li>La información ingresada es referente a la instalación de software, mantenimiento, etc.</li>
-                           </ol>
-                        </ul>
-                        <li>03. Informe de Bienstar Universitario.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe técnico de incidentes presentados en el campús.</li>
-                           </ol>
-                        </ul>
-                        <li>04. Informe de Biblioteca.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe de libros existentes.</li>
-                              <li>Requerimiento de material bibliográfico</li>
-                              <li>Informe técnico de acceso a Biblioteca virtual y física.</li>
-                              <li>Otros documentos.</li>
-                           </ol>
-                        </ul>
-                        <li>05. Informe de Comité Paritario.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Plan de contingencia.</li>
-                              <li>Plano y distribución de aulas.</li>
-                              <li>Informe de inspecciones.</li>
-                           </ol>
-                        </ul>
-                        <li>06. Clubes.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe técnico del desarrollo de las actividades del club por docente.</li>
-                           </ol>
-                        </ul>
-                        <li>07. Informe de capacitación-elaboración del sílabo.</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe técnico del taller de desarrollo del sílabo y canvas.</li>
-                           </ol>
-                        </ul>
-                        <li>08. Estudiantes</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Directivas.</li>
-                              <li>Reconocimiento a estudiantes destacados.</li>
-                           </ol>
-                        </ul>
-                        <li>09. Internacionalización</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Solicitud del estudiante para cursar un perido académico en el extranjero.</li>
-                              <li>Aprobación de parte del director.</li>
-                              <li>Informe técnico.</li>
-                           </ol>
-                        </ul>
-                        <li>10. Tu Director-Coordinador escucha</li>
-                        <ul>
-                           <p> Se ingresa la siguiente información.</p>
-                           <ol type="a">
-                              <li>Informe técnico de las reuniones realizadas.</li>
-                           </ol>
-                        </ul>
-                        <p>La información ingresada debe ser generada por semestre:</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                        <p>*El documento debe ingresarse tal como viene de la institución de procedencia.<br>
-                           **El documento debe ser codificado según el documento de codificación de la UIDE.
-                        </p>
-                     </div>
-                  </details>
-                  <details>
-                     <summary>Modelo de productividad docente</summary>
-                     <div class="instructions">
-                        <h3>Indicaciones:</h3>
-                        <ul>
-                           <p> En la matriz de productividad debe ir el logo de la UIDE y la firma del Director. La carpeta debe contener:</p>
-                           <ol type="a">
-                              <li>Excel generado para el reporte de productividad.</li>
-                              <li>Distribución de aulas (Solicitar a Janeth legalizado).</li>
-                           </ol>
-                        </ul>
-                        <p>La información generada debe estar organizada por semestre:</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                        <p>*El documento debe ingresarse tal como viene de la institución de procedencia.<br>
-                           **El documento debe ser codificado según el documento de codificación de la UIDE.
-                        </p>
-                     </div>
-                  </details>
-                  <details>
-                     <summary>Planificación académica</summary>
-                     <ul>
-                        <div class="instructions">
-                           <h3>Indicaciones:</h3>
-                           <p>Dentro de esta carpeta debe constar:</p>
-                           <li>00. Auditorías.</li>
-                           <ul>
-                              <p> La carpeta debe contener:</p>
-                              <ol type="a">
-                                 <li>Auditorás de trabajo: Solicitar al responsable de auditoría (Auditor-UIDE). La información es anual.</li>
-                                 <li>Autoevaluación: Consiste en la información de CACES. Solicitar a la persona responsable Auditor-UIDE.</li>
-                                 <li>GPR: Informes por semestre facilitados por responsable Auditor. </li>
-                              </ol>
-                           </ul>
-                           <li>01. Diseños y rediseños.</li>
-                           <ul>
-                              <p> Se ingresa la siguiente información.</p>
-                              <ol type="a">
-                                 <li>Modelo educativo.</li>
-                                 <li>Mallas curriculares.</li>
-                                 <li>Plan estratégico.</li>
-                                 <li>Otros documentos de la carrera como: Modelo pedagógico UIDE, Strategy 2027, entre otros.</li>
-                              </ol>
-                           </ul>
-                           <li>02. Docentes:</li>
-                           <ul>
-                              <p> Se ingresa la siguiente información.</p>
-                              <ol type="a">
-                                 <li>Asignaciones-distributivos: se organiza por periodo.</li>
-                                 <ol>
-                                    <li>Se debe cargar los oficios de asignación docente.</li>
-                                    <li>En el distributivo individual se debe cargar los distributivos docentes legalizados.</li>
-                                 </ol>
-                                 <li>Capacitaciones docentes.</li>
-                                 <ol>
-                                    <li>Se debe ingresar la información por año y crear carpeta por docente.</li>
-                                 </ol>
-                                 <li>Evaluación 360. La información se organiza por periodo.</li>
-                                 <p>En esta carpeta se debe ingresar lo siguiente:</p>
-                                 <ol>
-                                    <li>Informe de evaluación docente.</li>
-                                    <li>Matriz consolidada.</li>
-                                    <li>Plan de mejoras por docente.</li>
-                                 </ol>
-                                 <li>Hoja de vida. La información debe ser por año.</li>
-                                 <li>Reconocimiento. La información debe ser por periodo.</li>
-                                 <ol>
-                                    <li>Se debe elaborar informe técnico. Responsable: Director.</li>
-                                    <li>Adjuntar evidencias de reconocimiento.</li>
-                                 </ol>
-                                 <li>Selección docente. Esta se organiza por año.</li>
-                                 <ol>
-                                    <li>Contratos, concursos, acciones de personal.</li>
-                                    <li>Se debe solicitar a Talento Humano-Campus Loja</li>
-                                 </ol>
-                           </ul>
-                           <ul>
-                           <li>03. POA. Se organiza por años. La información es la siguiente:</li>
-                           <ol>
-                           <li>Acta de construcción.</li>
-                           <li>Actas de reuniones.</li>
-                           <li>Informe final.</li>
-                           <li>Entro otros documentos.</li>
-                           </ol>
-                           </ol>
-                           </ul> 
-                           <ul>
-                              <li>04. Power Skill</li>
-                           </ul>
-                           <p>*El documento debe ingresarse tal como viene de la institución de procedencia.<br>
-                              **El documento debe ser codificado según el documento de codificación de la UIDE.
-                           </p>
-                        </div>
-                     </ul>
-                  </details>
-               </ul>
-            </details>
-            <details>
-               <summary>Unidad de Titulación</summary>
-               <ul>
-                  <details>
-                     <summary>0. Asesoramiento y acompañamiento a la titulación</summary>
-                     <div class="instructions">
-                        <h3>Indicaciones:</h3>
-                        <ul>
-                           <p> Se organiza por periodo:</p>
-                           <ol type="a">
-                              <li>Sesiones informativas del proceso de titulación.</li>
-                           </ol>
-                        </ul>
-                        <p>La información generada debe estar organizada por semestre:</p>
-                        <ul>
-                           <li>00. Abril-Agosto.2023</li>
-                           <li>01. Noviembre.2023-Marzo.2024</li>
-                           <li>02. Abril-Agosto.2024</li>
-                           <li>03. Octubre.2024-Marzo.2025</li>
-                        </ul>
-                        <p>*El documento debe ingresarse tal como viene de la institución de procedencia.<br>
-                           **El documento debe ser codificado según el documento de codificación de la UIDE.
-                        </p>
-                     </div>
-                  </details>
-                  <details>
-                     <summary>1. Secretaría académica</summary>
-                     <div class="instructions">
-                        <h3>Indicaciones:</h3>
-                        <ul>
-                           <p> Se organiza por periodo:</p>
-                           <ol type="a">
-                              <li>Certificados de suficiencia de idiomas.</li>
-                              <li>Actas de grado.</li>
-                           </ol>
-                        </ul>
-                        <p>La información generada debe estar organizada por semestre:</p>
-                        <p>*El documento debe ingresarse tal como viene de la institución de procedencia.<br>
-                           **El documento debe ser codificado según el documento de codificación de la UIDE.
-                        </p>
-                     </div>
-                  </details>
-                  <details>
-                     <summary>2. Varios</summary>
-                     <ul>
-                        <li>Información adicional que se considere necesaria para la evaluación.</li>
-                     </ul>
-                  </details>
-               </ul>
-            </details>
+            <p>Aquí se listan los procesos y subprocesos relevantes.</p>
          </details>
       </main>
       <footer>
