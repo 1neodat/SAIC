@@ -16,12 +16,42 @@
          header {
          background:#8b0000;
          color: #FFFFFF;
-         padding: 5px 10px; /* Espaciado reducido */
+         padding: 10px; /* Espaciado reducido */
          text-align: center;
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
          border-bottom: 4px solid #f6a700;
          }
 
+          header .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+         }
+
+
+
+         header .logo {
+            flex: 0 0 100px;
+         }
+         header .logo img {
+            width: 100%;
+            height: auto;
+         }
+         header h1 {
+            flex: 1;
+            font-size: 1.7em;
+            margin: 5px 0 0 0;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #FFFFFF;
+            text-align: center;
+         }
+
+
+
+         
        
          h1 {
          font-size: 3.5em; /* Incrementa el tamaño de la universidad */
@@ -71,7 +101,7 @@
          }
          .card {
          max-width: 1000px; /* Ajusta al mismo ancho que el de "Procesos y subprocesos" */
-         margin: auto; /* Centra el contenedor horizontalmente */
+         margin: 0 auto; /* Centra el contenedor horizontalmente */
          border-radius: 12px; /* Mantiene el diseño consistente */
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          }       
