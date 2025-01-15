@@ -21,6 +21,13 @@
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
          border-bottom: 4px solid #f6a700;
          }
+
+         header div {
+    max-width: none; /* Quitar límites fijos */
+    flex: 1; /* Hacer que todos los elementos compartan el espacio disponible */
+}
+
+         
          h1 {
          font-size: 3.5em; /* Incrementa el tamaño de la universidad */
          margin: 5px 0;
@@ -124,7 +131,7 @@
          </div>
          <style>
             /* Responsive Design */
-            @media (max-width: 1000px) {
+            @media (max-width: 768px) {
             div[style*="display: flex;"] {
             flex-direction: column; /* Apila el contenido verticalmente */
             align-items: center;
