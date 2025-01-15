@@ -6,32 +6,28 @@
       <title>UIDE-SAIC</title>
       <style>
          body {
-         font-family: 'Roboto', Arial, sans-serif;
-         background-color: #F4F6F8;
-         color: #333333;
-         margin: 0;
-         padding: 0;
-         line-height: 1.2;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #F4F6F8;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
          }
          header {
-         background:#8b0000;
-         color: #FFFFFF;
-         padding: 10px; /* Espaciado reducido */
-         text-align: center;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         border-bottom: 4px solid #f6a700;
+            background: #8b0000;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #f6a700;
          }
-
-          header .header-container {
+         header .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
          }
-
-
-
          header .logo {
             flex: 0 0 100px;
          }
@@ -48,155 +44,112 @@
             color: #FFFFFF;
             text-align: center;
          }
-
-
-
-         
-       
-         h1 {
-         font-size: 3.5em; /* Incrementa el tamaño de la universidad */
-         margin: 5px 0;
-         }
-         h2 {
-         font-size: 1.3em;
-         margin: 3px 0;
-         }
          main {
-         padding: 30px;
-         max-width: 1000px;
-         margin: auto;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
          }
-
-
-         
          details {
-         background-color: #FFFFFF;
-         border: 1px solid #E0E0E0;
-         border-radius: 8px;
-         margin-bottom: 15px;
-         padding: 15px;
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-         transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
          }
          details:hover {
-         transform: scale(1.02);
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
          }
          summary {
-         cursor: pointer;
-         font-weight: bold;
-         font-size: 1.2em;
-         color: #8b0000;
-         transition: color 0.2s;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #8b0000;
+            transition: color 0.2s;
          }
          summary:hover {
-         color: #5e2129;
+            color: #5e2129;
          }
          ul {
-         list-style: none;
-         padding-left: 20px;
+            list-style: none;
+            padding-left: 20px;
          }
          li {
-         margin: 8px 0;
+            margin: 8px 0;
          }
          .card {
-         max-width: 1000px; /* Ajusta al mismo ancho que el de "Procesos y subprocesos" */
-         margin: 0 auto; /* Centra el contenedor horizontalmente */
-         border-radius: 12px; /* Mantiene el diseño consistente */
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         }       
-         .card {
-         background: #FFFFFF;
-         padding: 20px;
-         text-align: justify;
-         margin-bottom: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #FFFFFF;
+            padding: 20px;
+            text-align: justify;
+            margin-bottom: 10px;
          }
          .card h2 {
-         font-size: 0.9em;
-         color: #8B0000;
-         margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #8B0000;
+            margin-bottom: 15px;
+            text-align: center;
          }
-         .card .authors {
-         background: #F6F6F6;
-         border-radius: 3px;
-         padding: 6px;
-         margin-top: 10px;
-         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+         .authors {
+            background: #F6F6F6;
+            border-radius: 3px;
+            padding: 6px;
+            margin-top: 10px;
+            text-align: right;
          }
-         .card .authors h3 {
-         font-size: 0.8em;
-         color: #8B0000;
-         margin-bottom: 3px;
+         .authors p {
+            margin: 2px 0;
+            font-size: 0.9em;
+            color: #8B0000;
          }
-         .card .authors p {
-         margin: 2px 0;
-         font-size: 0.8em;
-         }
-
-
          footer {
-         background-color: #012e46; /* Color de fondo */
-         color: #FFFFFF; /* Color del texto */
-         padding: 25px 0; /* Espaciado interno */
-         text-align: center; /* Centrar el texto */
-         font-size: 0.8em; /* Tamaño del texto */
-         border-top: 4px solid #f6a700; /* Línea superior */
+            background-color: #012e46;
+            color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.8em;
+            border-top: 4px solid #f6a700;
          }
-
-         
+         @media (max-width: 768px) {
+            header .header-container {
+               flex-direction: column;
+               align-items: center;
+            }
+            header h1 {
+               font-size: 1.5em;
+            }
+            main {
+               padding: 20px;
+            }
+         }
       </style>
    </head>
    <body>
       <header>
-         <div style="display: flex; align-items: center; justify-content: space-between; background-color: #8b0000; color: white; border-radius: 8px;">
-            <!-- Logo -->
-            <div style="flex: 1 1 90px; text-align: left; max-width: 100px;">
-               <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador" style="width: 100%; height: auto;">
+         <div class="header-container">
+            <div class="logo">
+               <img src="https://raw.githubusercontent.com/1neodat/SAIC/main/UIDE_logo-02.png" alt="Logo Universidad Internacional del Ecuador">
             </div>
-            <!-- Texto -->
-            <div style="flex: 1 1 calc(100% - 100px); text-align: center; margin: 0;">
-               <h1 style="font-size: 1.7em; margin: 5px 0 0 0; font-weight: bold; line-height: 1.2; color: #FFFFFF;">Sistema de Aseguramiento Interno de Calidad</h1>
-            </div>
+            <h1>Sistema de Aseguramiento Interno de Calidad</h1>
          </div>
-         <style>
-            /* Responsive Design */
-            @media (max-width: 768px) {
-            div[style*="display: flex;"] {
-            flex-direction: column; /* Apila el contenido verticalmente */
-            align-items: center;
-            padding: 1px 2px; /* Reduce espacio horizontal */
-            width: 100%; /* Asegura que ocupe el ancho completo del viewport */
-            overflow-x: hidden; /* Elimina desplazamientos */
-            }
-            }
-            div[style*="max-width: 100px;"] {
-            text-align: center;
-            margin-bottom: 2px;
-            }
-            h1 {
-            font-size: 1.5em; /* Reduce el tamaño del texto en pantallas pequeñas */
-            margin: 2px 0; /* Reduce espacio entre logo y texto */
-            }
-            }
-            /* Alineación general */
-            div[style*="background-color: #8B0000;"] {
-            max-width: 1000px; /* Ajusta el ancho máximo */
-            margin: auto; /* Centra horizontalmente */
-            }
-         </style>
       </header>
       <main>
-      <div class="card">
-         <h2 style="text-align: center; font-size: 1.4em; color: #8B0000; font-weight: bold;">Gestión de documentos</h2>
-         <p>
-            El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
-            <h2 class="authors" style="text-align: right; padding: 10px; style="font-size: 0.9em; color: #8B0000; margin-bottom: 1px;">Desarrollado por: 
-         <p>Silvia Jaramillo</p>
-         <P>Darío Hurtado</P>
-         </h2>
-         </p>
-      </div>
-      <main>
+         <div class="card">
+            <h2>Gestión de documentos</h2>
+            <p>
+               El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
+            </p>
+            <div class="authors">
+               <p>Desarrollado por:</p>
+               <p>Silvia Jaramillo</p>
+               <p>Darío Hurtado</p>
+            </div>
+         </div>
          <details>
             <summary>Procesos y subprocesos</summary>
             <hr>
