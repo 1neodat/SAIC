@@ -11,7 +11,7 @@
             color: #333333;
             margin: 0;
             padding: 0;
-            line-height: 1.5;
+            line-height: 1.2;
          }
          header {
             background: #8b0000;
@@ -37,80 +37,65 @@
          }
          header h1 {
             flex: 1;
-            font-size: 1.8em;
-            margin: 5px 0;
+            font-size: 1.7em;
+            margin: 5px 0 0 0;
             font-weight: bold;
+            line-height: 1.2;
             color: #FFFFFF;
+            text-align: center;
          }
          main {
             padding: 30px;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-         }
-         .left-section {
             display: flex;
-            flex-direction: column;
             gap: 20px;
          }
-         .gestion-section, .details-section {
+         .gestion-section {
+            flex: 1;
             background-color: #FFFFFF;
             border: 1px solid #E0E0E0;
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          }
-         .agenda-section {
-            background-color: #FFFFFF;
-            border: 1px solid #E0E0E0;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            grid-column: 2 / 3;
-         }
-         .agenda-section h2, .gestion-section h2, .details-section h2 {
-            text-align: center;
-            color: #8b0000;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-         }
-         .agenda-section table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-         }
-         .agenda-section table, .agenda-section th, .agenda-section td {
-            border: 1px solid #ccc;
-         }
-         .agenda-section th, .agenda-section td {
-            padding: 10px;
-            text-align: center;
-         }
-         .agenda-section th {
-            background-color: #8b0000;
-            color: #FFFFFF;
-         }
+
          .gestion-section p {
             text-align: justify;
             line-height: 1.6;
          }
-         .gestion-section .authors {
-            margin-top: 20px;
-            text-align: center;
-         }
          .gestion-section .authors p {
-            margin: 2px 0;
             font-size: 0.9em;
             color: #8B0000;
+         }
+
+
+
+
+
+
+
+
+         
+         details {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+         }
+         details:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
          }
          summary {
             cursor: pointer;
             font-weight: bold;
             font-size: 1.2em;
             color: #8b0000;
-            margin-bottom: 10px;
+            transition: color 0.2s;
          }
          summary:hover {
             color: #5e2129;
@@ -122,20 +107,58 @@
          li {
             margin: 8px 0;
          }
+         .card {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #FFFFFF;
+            padding: 30px;
+            text-align: justify;
+            margin-bottom: 10px;
+         }
+         .card h2 {
+            font-size: 1.4em;
+            color: #8B0000;
+            margin-bottom: 15px;
+            text-align: center;
+         }
+
+
+         
+         .authors {
+            background: #F6F6F6;
+            border-radius: 3px;
+            padding: 6px;
+            margin-top: 10px;
+            text-align: right;
+         }
+         .authors p {
+            margin: 2px 0;
+            font-size: 0.9em;
+            color: #8B0000;          
+         }     
          footer {
             background-color: #012e46;
             color: #FFFFFF;
             padding: 25px 0;
             text-align: center;
-            font-size: 0.9em;
+            font-size: 0.8em;
             border-top: 4px solid #f6a700;
          }
          @media (max-width: 768px) {
-            main {
-               grid-template-columns: 1fr;
+            header .header-container {
+               flex-direction: column;
+               align-items: center;
             }
-            .agenda-section {
-               grid-column: 1 / 2;
+            header .logo img {
+               max-width: 140px; /* Ajuste el tamaño según su preferencia */
+            }
+            header h1 {
+               font-size: 1.5em;
+            }
+            main {
+               padding: 25px;
             }
          }
       </style>
@@ -150,17 +173,15 @@
          </div>
       </header>
       <main>
-         <div class="left-section">
-            <div class="gestion-section">
-               <h2>Gestión de Documentos</h2>
-               <p>
-                  El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
-               </p>
-               <div class="authors">
-                  <p><b>Desarrollado por:</b></p>
-                  <p>Silvia Jaramillo</p>
-                  <p>Darío Hurtado</p>
-               </div>
+         <div class="card">
+            <h2>Gestión de documentos</h2>
+            <p>
+               El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
+            </p>
+            <div class="authors">
+               <p><b>Desarrollado por:</b></p>
+               <p>Silvia Jaramillo</p>
+               <p>Darío Hurtado</p>
             </div>
          </div>
          <details>
