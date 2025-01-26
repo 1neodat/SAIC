@@ -49,6 +49,13 @@
             max-width: 1000px;
             margin: 0 auto;
             display: flex;
+            flex-direction: row;
+            gap: 20px;
+         }
+         .left-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
          }
          .gestion-section {
@@ -59,8 +66,15 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          }
+         .details-section {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         }
          .agenda-section {
-            flex: 0 0 30%;
+            flex: 1;
             background-color: #FFFFFF;
             border: 1px solid #E0E0E0;
             border-radius: 12px;
@@ -80,6 +94,10 @@
          }
          .agenda-section table, .agenda-section th, .agenda-section td {
             border: 1px solid #ccc;
+         }
+         .agenda-section th, .agenda-section td {
+            padding: 10px;
+            text-align: center;
          }
          .agenda-section th {
             background-color: #8b0000;
