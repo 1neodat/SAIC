@@ -48,7 +48,52 @@
             padding: 30px;
             max-width: 1000px;
             margin: 0 auto;
+            display: flex;
+            gap: 20px;
          }
+         .gestion-section {
+            flex: 1;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         }
+         .agenda-section {
+            flex: 0 0 30%;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         }
+         .agenda-section h2, .gestion-section h2 {
+            text-align: center;
+            color: #8b0000;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+         }
+         .agenda-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+         }
+         .agenda-section table, .agenda-section th, .agenda-section td {
+            border: 1px solid #ccc;
+         }
+         .agenda-section th {
+            background-color: #8b0000;
+            color: #FFFFFF;
+         }
+         .gestion-section p {
+            text-align: justify;
+            line-height: 1.6;
+         }
+         .gestion-section .authors p {
+            font-size: 0.9em;
+            color: #8B0000;
+         }
+       
          details {
             background-color: #FFFFFF;
             border: 1px solid #E0E0E0;
@@ -174,6 +219,41 @@
                <p>Darío Hurtado</p>
             </div>
          </div>
+
+
+
+
+          <div class="agenda-section">
+            <h2>Agenda de Entrega de Documentos</h2>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Nombre del Documento</th>
+                     <th>Fecha de Entrega</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Informe Técnico</td>
+                     <td>2025-02-10</td>
+                  </tr>
+                  <tr>
+                     <td>Matriz CPC</td>
+                     <td>2025-03-15</td>
+                  </tr>
+                  <tr>
+                     <td>Plan Estratégico</td>
+                     <td>2025-04-20</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+
+         
+
+
+         
          <details>
             <summary>Procesos y subprocesos</summary>
             <hr>
