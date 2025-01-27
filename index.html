@@ -48,27 +48,65 @@
             padding: 30px;
             max-width: 1000px;
             margin: 0 auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
          }
-         .gestion-section {
-            flex: 1;
+         .left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+         }
+         .gestion-section, .details-section {
             background-color: #FFFFFF;
             border: 1px solid #E0E0E0;
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          }
-
+         .agenda-section {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            grid-column: 2 / 3;
+         }
+         .agenda-section h2, .gestion-section h2, .details-section h2 {
+            text-align: center;
+            color: #8b0000;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+         }
+         .agenda-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+         }
+         .agenda-section table, .agenda-section th, .agenda-section td {
+            border: 1px solid #ccc;
+         }
+         .agenda-section th, .agenda-section td {
+            padding: 10px;
+            text-align: center;
+         }
+         .agenda-section th {
+            background-color: #8b0000;
+            color: #FFFFFF;
+         }
          .gestion-section p {
             text-align: justify;
             line-height: 1.6;
          }
+         .gestion-section .authors {
+            margin-top: 20px;
+            text-align: center;
+         }
          .gestion-section .authors p {
+            margin: 2px 0;
             font-size: 0.9em;
             color: #8B0000;
          }
-
 
 
 
@@ -124,6 +162,24 @@
             text-align: center;
          }
 
+         
+         .download-section, .calendar-section, .agenda-section {
+            margin-top: 20px;
+            text-align: center;
+         }
+         .download-section a, .calendar-section button, .agenda-section button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background-color: #8b0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+         }
+         .download-section a:hover, .calendar-section button:hover, .agenda-section button:hover {
+            background-color: #5e2129;
+         }
 
          
          .authors {
@@ -812,7 +868,36 @@
                </a>
                </div>
             </details>
-      </details>
+         </details>
+
+         <div class="agenda-section">
+            <h2>Agenda de Entrega de Documentos</h2>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Nombre del Documento</th>
+                     <th>Fecha de Entrega</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Informe Técnico</td>
+                     <td>2025-02-10</td>
+                  </tr>
+                  <tr>
+                     <td>Matriz CPC</td>
+                     <td>2025-03-15</td>
+                  </tr>
+                  <tr>
+                     <td>Plan Estratégico</td>
+                     <td>2025-04-20</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+
+
          
          
       </main>
