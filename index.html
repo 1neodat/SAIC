@@ -88,8 +88,8 @@
          padding: 30px;
          max-width: 1000px;
          margin: 40px auto 0 auto; /* Separa el contenido del encabezado */
-         display: grid;
-         grid-template-columns: 2fr 1fr;
+            display: flex;
+            flex-direction: column;
          gap: 20px;
          }
 
@@ -284,9 +284,10 @@
 
 
          
-         
-         <div class="agenda-section">
-            <h2>Agenda</h2>
+         <details>
+            <summary>Agenda</summary>
+            <hr>
+            <div class="agenda-section">
             <table>
                <thead>
                   <tr>
@@ -301,6 +302,8 @@
                </tbody>
             </table>
          </div>
+         </details>
+
          
 
 
