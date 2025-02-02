@@ -4,9 +4,16 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>UIDE-SAIC</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
       <style>
 
 
+         
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
          
          :root {
@@ -20,7 +27,10 @@
          }
 
 
+
          
+
+
          
          body {
          font-family: 'Roboto', Arial, sans-serif;
@@ -29,7 +39,11 @@
          margin: 0;
          padding: 0;
          line-height: 1.2;
+         padding-top: 80px; /* Ajuste según la altura del header */
          }
+
+
+         
          header {
          background: #8b0000;
          color: #FFFFFF;
@@ -37,7 +51,13 @@
          text-align: center;
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
          border-bottom: 4px solid #f6a700;
+         position: fixed; /* Hace que el encabezado sea fijo */
+         top: 0;
+         left: 0;
+         width: 100%;
+         z-index: 1000; /* Asegura que el encabezado esté por encima del contenido */
          }
+         
          header .header-container {
          display: flex;
          align-items: center;
@@ -61,14 +81,30 @@
          color: #FFFFFF;
          text-align: center;
          }
+
+
+         
          main {
          padding: 30px;
          max-width: 1000px;
-         margin: 0 auto;
+         margin: 40px auto 0 auto; /* Separa el contenido del encabezado */
          display: grid;
          grid-template-columns: 2fr 1fr;
          gap: 20px;
          }
+
+
+
+
+          /* Media Query: Ajustar margen cuando la pantalla es menor a 768px (dispositivos móviles) */
+            @media screen and (max-width: 768px) {
+            main {
+                margin: 100px auto 0 auto; /* Aumenta el espacio cuando la pantalla es pequeña */
+               }
+            }
+
+
+         
          .left-section {
          display: flex;
          flex-direction: column;
