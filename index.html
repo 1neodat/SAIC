@@ -942,18 +942,20 @@
       <script>
          document.getElementById('searchBox').addEventListener('input', function() {
             let filter = this.value.toLowerCase();
-            let details = document.querySelectorAll('details');
-            details.forEach(detail => {
-               let summary = detail.querySelector('summary');
-               if (summary.textContent.toLowerCase().includes(filter)) {
-                  detail.style.display = "block";
+            let content = document.getElementById("content");
+            let elements = content.querySelectorAll("details, summary, p, li");
+            
+            elements.forEach(element => {
+               let text = element.textContent.toLowerCase();
+               if (text.includes(filter)) {
+                  element.style.display = "block";
+                  element.innerHTML = element.textContent.replace(new RegExp(filter, "gi"), match => `<span class='highlight'>${match}</span>`);
                } else {
-                  detail.style.display = "none";
+                  element.style.display = "none";
                }
             });
          });
       </script>
-
 
 
 
