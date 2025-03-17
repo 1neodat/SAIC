@@ -5,17 +5,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>UIDE-SAIC</title>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-      <style>
-
-
-         
+      <style>       
       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-         
          :root {
             --primary-color: #8b0000;
             --secondary-color: #f6a700;
@@ -24,14 +19,7 @@
             --white-color: #FFFFFF;
             --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             --border-radius: 12px;
-         }
-
-
-
-         
-
-
-         
+         }                
          body {
          font-family: 'Roboto', Arial, sans-serif;
          background-color: #F4F6F8;
@@ -40,10 +28,7 @@
          padding: 0;
          line-height: 1.2;
          padding-top: 80px; /* Ajuste según la altura del header */
-         }
-
-
-         
+         }       
          header {
          background: #8b0000;
          color: #FFFFFF;
@@ -57,7 +42,6 @@
          width: 100%;
          z-index: 1000; /* Asegura que el encabezado esté por encima del contenido */
          }
-         
          header .header-container {
          display: flex;
          align-items: center;
@@ -96,7 +80,6 @@
             border-radius: 8px;
             font-size: 12px;
          }
-         
          main {
          padding: 30px;
          max-width: 1000px;
@@ -105,19 +88,12 @@
             flex-direction: column;
          gap: 20px;
          }
-
-
-
-
           /* Media Query: Ajustar margen cuando la pantalla es menor a 768px (dispositivos móviles) */
             @media screen and (max-width: 768px) {
             main {
                 margin: 100px auto 0 auto; /* Aumenta el espacio cuando la pantalla es pequeña */
                }
-            }
-
-
-         
+            }        
          .left-section {
          display: flex;
          flex-direction: column;
@@ -301,7 +277,7 @@
          <input type="text" id="searchBox" class="search-box" placeholder="Buscar documentos o procesos...">
       </div>
 
-         
+        <main id="content"> 
          <details>
             <summary>Agenda</summary>
             <hr>
@@ -958,7 +934,8 @@
             </details>
          </details>       
       </main>
-
+      </main>
+      
 
 
 
