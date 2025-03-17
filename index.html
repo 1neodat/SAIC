@@ -6,19 +6,19 @@
       <title>UIDE-SAIC</title>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
       <style>       
-      * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
          :root {
-            --primary-color: #8b0000;
-            --secondary-color: #f6a700;
-            --background-color: #F4F6F8;
-            --text-color: #333333;
-            --white-color: #FFFFFF;
-            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            --border-radius: 12px;
+         --primary-color: #8b0000;
+         --secondary-color: #f6a700;
+         --background-color: #F4F6F8;
+         --text-color: #333333;
+         --white-color: #FFFFFF;
+         --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         --border-radius: 12px;
          }                
          body {
          font-family: 'Roboto', Arial, sans-serif;
@@ -64,36 +64,39 @@
          line-height: 1.2;
          color: #FFFFFF;
          text-align: center;
-         }
+         }       
+         
 
-
-         }
+         
          .search-container {
-            text-align: center;
-            margin: 15px auto;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
          }
          .search-box {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px;
+            width: 60%;
+            max-width: 400px;
+            padding: 8px;
             border: 1px solid var(--primary-color);
             border-radius: 8px;
-            font-size: 12px;
+            font-size: 14px;
          }
+         
+         
          main {
          padding: 30px;
          max-width: 1000px;
          margin: 40px auto 0 auto; /* Separa el contenido del encabezado */
-            display: flex;
-            flex-direction: column;
+         display: flex;
+         flex-direction: column;
          gap: 20px;
          }
-          /* Media Query: Ajustar margen cuando la pantalla es menor a 768px (dispositivos móviles) */
-            @media screen and (max-width: 768px) {
-            main {
-                margin: 100px auto 0 auto; /* Aumenta el espacio cuando la pantalla es pequeña */
-               }
-            }        
+         /* Media Query: Ajustar margen cuando la pantalla es menor a 768px (dispositivos móviles) */
+         @media screen and (max-width: 768px) {
+         main {
+         margin: 100px auto 0 auto; /* Aumenta el espacio cuando la pantalla es pequeña */
+         }
+         }        
          .left-section {
          display: flex;
          flex-direction: column;
@@ -248,9 +251,9 @@
          }
          }
          .highlight {
-            background-color: yellow;
-            font-weight: bold;
-          }
+         background-color: yellow;
+         font-weight: bold;
+         }
       </style>
    </head>
    <body>
@@ -261,55 +264,41 @@
             </div>
             <h1>Sistema de Aseguramiento Interno de Calidad</h1>
          </div>
-      </header> 
-      
-
-      
-      
-      
-      
+      </header>
       <div class="card">
-            <h2>Gestión de documentos</h2>
-            <p>
-               El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
-            </p>
-            <div class="authors">
-               <p><b>Desarrollado por:</b></p>
-               <p>Silvia Jaramillo</p>
-               <p>Darío Hurtado</p>
-            </div>
+         <h2>Gestión de documentos</h2>
+         <p>
+            El Instructivo para la Gestión de Documentos se establece como una herramienta técnica para estandarizar y optimizar el proceso de carga de información en el SAIC, garantizando una gestión eficiente, una organización estructurada y la accesibilidad necesaria para cumplir con los criterios de acreditación institucional.
+         </p>
+         <div class="authors">
+            <p><b>Desarrollado por:</b></p>
+            <p>Silvia Jaramillo</p>
+            <p>Darío Hurtado</p>
          </div>
-
-
+      </div>
       <div class="search-container">
          <input type="text" id="searchBox" class="search-box" placeholder="Buscar documentos o procesos...">
       </div>
-
-        <main id="content"> 
+      <main id="content">
          <details>
             <summary>Agenda</summary>
             <hr>
             <div class="agenda-section">
-            <table>
-               <thead>
-                  <tr>
-                     <th>Actividad</th>
-                     <th>Fecha de Entrega</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>Cargar información de los procesos: Admisión académica y desarrollo enseñanza aprendizaje</td>
-                     <td>2025-02-19</td>
-               </tbody>
-            </table>
-         </div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Actividad</th>
+                        <th>Fecha de Entrega</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Cargar información de los procesos: Admisión académica y desarrollo enseñanza aprendizaje</td>
+                        <td>2025-02-19</td>
+                  </tbody>
+               </table>
+            </div>
          </details>
-
-         
-
-
-
          <details>
             <summary>Procesos y subprocesos</summary>
             <hr>
@@ -897,10 +886,6 @@
                </ul>
             </details>
          </details>
-         
-
-
-         
          <details>
             <summary>Documentos generales</summary>
             <hr>
@@ -940,12 +925,8 @@
                   </a>
                </div>
             </details>
-         </details>       
+         </details>
       </main>
-   
-
-
-
       <script>
          document.getElementById('searchBox').addEventListener('input', function() {
             let filter = this.value.toLowerCase();
@@ -965,13 +946,6 @@
             });
          });
       </script>
-
-
-
-
-
-
-      
       <footer>
          © 2024 UIDE - Todos los derechos reservados
       </footer>
