@@ -962,12 +962,34 @@
                   </a>
                </div>
             </details>
-         </details>
-         
-
-
-         
+         </details>       
       </main>
+
+
+
+
+      <script>
+         document.getElementById('searchBox').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let details = document.querySelectorAll('details');
+            details.forEach(detail => {
+               let summary = detail.querySelector('summary');
+               if (summary.textContent.toLowerCase().includes(filter)) {
+                  detail.style.display = "block";
+               } else {
+                  detail.style.display = "none";
+               }
+            });
+         });
+      </script>
+
+
+
+
+
+
+
+      
       <footer>
          © 2024 UIDE - Todos los derechos reservados
       </footer>
