@@ -949,16 +949,18 @@
       <script>
          document.getElementById('searchBox').addEventListener('input', function() {
             let filter = this.value.toLowerCase();
-            let content = document.getElementById("content");
-            let elements = content.querySelectorAll("details, summary, p, li");
+            let details = document.querySelectorAll('details');
             
-            elements.forEach(element => {
-               let text = element.textContent.toLowerCase();
-               if (text.includes(filter)) {
-                  element.style.display = "block";
-                  element.innerHTML = element.textContent.replace(new RegExp(filter, "gi"), match => `<span class='highlight'>${match}</span>`);
+            details.forEach(detail => {
+               let summary = detail.querySelector('summary');
+               let content = detail.innerHTML.toLowerCase();
+               
+               if (summary.textContent.toLowerCase().includes(filter) || content.includes(filter)) {
+                  detail.style.display = "block";
+                  detail.open = true; // Expande el details
                } else {
-                  element.style.display = "none";
+                  detail.style.display = "none";
+                  detail.open = false;
                }
             });
          });
